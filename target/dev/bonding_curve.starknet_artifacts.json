@@ -1,1 +1,1 @@
-{"version":1,"contracts":[{"id":"ti8iu9l1qr012","package_name":"bonding_curve","contract_name":"SimpleContract","module_path":"bonding_curve::SimpleContract","artifacts":{"sierra":"bonding_curve_SimpleContract.contract_class.json","casm":null}}]}
+{"version":1,"contracts":[{"id":"h9vj649591f42","package_name":"bonding_curve","contract_name":"SwitchContract","module_path":"bonding_curve::SwitchContract","artifacts":{"sierra":"bonding_curve_SwitchContract.contract_class.json","casm":null}}]}

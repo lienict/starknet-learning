@@ -1,0 +1,4 @@
+- component giống nhưu modular để reuse logic, storage, event...
+https://community.starknet.io/t/cairo-components/101136
+https://docs.openzeppelin.com/contracts-cairo/0.14.0/
+https://github.com/WTFAcademy/WTF-Cairo/blob/main/30_Component/src/ownercounter.cairo
