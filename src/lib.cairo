@@ -54,7 +54,24 @@ mod ConstantProductAmm {
             let amount_out = (reserve_out * amount_in_with_fee) / (reserve_in + amount_in_with_fee);
             amount_out
         }
-        fn add_liquidity(ref self: ContractState, amount0: u256, amount1: u256) -> u256 {}
+        fn add_liquidity(ref self: ContractState, amount0: u256, amount1: u256) -> u256 {
+
+            let caller = get_caller_address();
+            let this = get_contract_address();
+
+            let (token0, token1): (IERC20Dispatcher, IERC20Dispatcher) = (
+                self.token0.read(), self.token1.read()
+            );
+
+            token0.transfer_from(caller,this,amount0);
+            token1.transfer_from(caller,this,amount1);
+
+            // how much dx dy to add
+            // dy = y /(x * dx)
+
+            let (reserve0,reserve1): (u256,u256) = (self.reserve0.read(),self.reserve1.read());
+
+        }
         fn remove_liquidity(ref self: ContractState, shares: u256) -> u256 {}
     }
 }
